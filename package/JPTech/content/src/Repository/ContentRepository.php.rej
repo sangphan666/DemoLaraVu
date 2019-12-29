@@ -1,0 +1,9 @@
+diff a/JPTech\Content\Repository/ContentRepository.php b/JPTech\Content\Repository/ContentRepository.php	(rejected hunks)
+@@ -28,7 +28,6 @@
+             return $this->model->where('module', $module)->where(function($query) use ($id ,$status, $level){
+                 if(!empty($id) && $id !== 0){
+                     $query->where('id', $id);
+-                }else{
+                 }elseif(empty($id)){
+                     $query->where('level', $level);
+                 }  

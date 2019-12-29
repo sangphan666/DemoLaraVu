@@ -1,0 +1,110 @@
+body{
+    &:not(.sidebar-mini-md){
+        .content-wrapper{
+            margin-left: 240px;
+        }
+        .main-header{
+            margin-left: 240px;
+        }
+    }
+}
+.custom__sidebar{
+    background-color: #fff;
+    width: 240px;
+    box-shadow: 0 0 3px rgba(0,0,0,.25)!important;
+    .custom__sidebar__brand{
+        min-height: 64px;
+        margin-bottom: 0;
+        border-bottom: 0;
+        a{
+            display: flex;
+            align-items: center;
+            color: #CF0656;
+            font-size: 18px;
+            font-weight: bold;
+            img{
+                box-shadow: none!important;
+            }
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+    &::before{
+        width: 240px;
+    }
+    .sidebar{
+        .nav-sidebar{
+            .nav-item{
+                &.active{
+                    a{
+                        background-color: #F0F3F7!important;
+                        color: #CF0656!important;
+                    }
+                }
+                a{
+                    color: #343a40;
+                    font-size: 14px;
+                    min-height: 48px;
+                    display: flex;
+                    align-items: center;
+                    border-left: 0!important;
+                    &:not(.active):hover{
+                        color: #CF0656
+                    }
+                    &.active{
+                        background-color: #F5F8FC;
+                        color: #39475B;
+                        box-shadow: none;
+                    }
+                    p{
+                        display: flex;
+                        align-items: center;
+                        i{
+                            top: initial;
+                        }
+                    }
+                    &:focus{
+                        color: #343a40;
+                    }
+                    .nav-icon{
+                        margin-right: 15px;
+                    }
+                }
+                &:hover{
+                    a{
+                        background-color: #F0F3F7;
+                        color: #CF0656;
+                    }
+                }
+                &.menu-open{
+                    a{
+                        background-color: #F5F8FC;
+                        color: #39475B;
+                        i.right{
+                            -webkit-transform: rotate(90deg);
+                            transform: rotate(90deg);
+                        }
+                    }
+                }
+                .nav-treeview{
+                    .nav-item{
+                        a{
+                            border-left: 0;
+                            padding-left: 40px;
+                            &:hover{
+                                background-color: #F0F3F7;
+                                color: #CF0656;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .custom__sidebar__brand{
+        .ti{
+            color: #343a40;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+{
+    "name": "inspiron/slug",
+    "description": "slug",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hieu Loc",
+            "email": "locsinhngochieu@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "JPTech\\Slug\\": "src/"
+        }
+    }
+}

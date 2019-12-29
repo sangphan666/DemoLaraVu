@@ -1,0 +1,82 @@
+.box_info_user{
+    display: flex;
+    justify-content: center;
+    .item{
+        width: 400px;
+        height: 508px;
+        border-radius: 10px;
+        display: inline-block;
+        border: 1px solid #F2F4F8;
+        float: left;
+        .box_img{
+            text-align: center;
+            margin: 0 auto;
+            position: relative;
+            display: table;
+            img{
+                width: 92px;
+                height: 92px;
+                border-radius: 100%;
+                object-fit: cover;
+            }
+            .custom_btn_upload{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                margin-bottom: 0;
+                .btn_upload{
+                    @include styleButton(#fff,#F2F4F8,0,0,100%);
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    font-size: 20px;
+                }
+                input[type=file] {
+                    font-size: 100px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    opacity: 0;
+                    
+                }
+            }
+        }
+        .custom_button{
+            position: relative;
+            @include styleButton($color-pink-1,$color-pink-1,5px,10px,4px);
+            @include styleText($fs-3,$fw-normal,#F0F3F7);
+            transition: all .5s;
+            &:hover{
+                @include hoverButton($color-white-0,$color-black-1,$color-pink-1);
+            }
+        }
+        .icheck-primary{
+            input{
+                &:first-child{
+                    &:checked+label::before{
+                        background-color: $color-pink-1;
+                        border-color: $color-pink-1;
+                    }
+                    &:not(:checked):not(:disabled):hover+label::before{
+                        border-color: $color-pink-1;
+                    }
+                }
+            }
+            label{
+                @include styleText($fs-3,$fw-normal,#8998AC);
+            }
+        }
+        &:first-child{
+            margin-right: 20px;
+        }
+    }
+    &.custom_detail_user{
+        .item{
+            width: 373px;
+            height: 579px;
+        }
+    }
+}

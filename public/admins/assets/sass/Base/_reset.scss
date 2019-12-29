@@ -1,0 +1,26 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	font-family: 'Montserrat', sans-serif;
+	font-size: $fs-0;
+}
+a{
+	text-decoration: none!important;
+	transition: all .5s;
+}
+ul{
+	list-style-type: none;
+	margin-bottom: 0;
+	li{
+		display: block;
+	}
+}
+ol{
+	list-style-type: none;
+	li{
+		display: block;
+	}
+}

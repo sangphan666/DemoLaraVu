@@ -1,0 +1,104 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+    .login__all{
+        background: $color-white-1;
+        overflow: hidden;
+        height: 100vh;
+        .login__background{
+            background: url(../img/Background.png) no-repeat;
+            background-size: cover!important;
+            display: inline-block;
+            width: 100%;
+            .box__login{
+                background: #fff;
+                border-radius: 10px;
+                border: 1px solid #dddddd;
+                width: 360px;
+                height: 512px;
+                margin: 7% auto;
+                padding: 69px 20px;
+                -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+                -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+                box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+                h1{
+                    @include styleText(18px,$fw-bold,$color-pink-1);
+                    text-align: center;
+                    margin-bottom: 38px;
+                }
+                h3{
+                    font-size: 18px;
+                    margin-bottom: 30px;
+                }
+                .box__input{
+                    position: relative;
+                    input{
+                        border-radius: 25px;
+                        min-height: 50px;
+                        width: 320px;
+                        font-size: 14px;
+                        padding-right: 50px;
+                        &:focus{
+                            border: 1px solid #dddddd;
+                            box-shadow: none;
+                        }
+                    }
+                    .ti{
+                        position: absolute;
+                        top: 50%;
+                        right: 3%;
+                        transform: translate(-50%,-50%);
+                        font-size: 16px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .text_danger{
+                    @include styleText(12px,$fw-normal,#FB745B);
+                    margin-bottom: 18px;
+                    min-height: 18px;
+                }
+                .custom_checkbox{
+                    margin-bottom: 20px!important;
+                    label{
+                        @include styleText(12px,$fw-normal,#8998AC);
+                        min-height: 16px;
+                        line-height: 16px;
+                        &::before{
+                            width: 16px;
+                            height: 16px;
+                            border-radius: 4px;
+                        }
+                        &::after{
+                            transform: translate(4.75px,1.5px) rotate(45deg);
+                            -ms-transform: translate(4.75px,1.5px) rotate(45deg);
+                        }
+                    }
+                }
+                .login__action{
+                    .item{
+                        display: flex;
+                        align-items: center;
+                        a{
+                            font-size: 12px;
+                        }
+                        &:last-child{
+                            justify-content: flex-end;
+                            .btn{
+                                @include styleButton($color-pink-1,$color-pink-1,$pd-1,$pd-2,30px);
+                                font-size: 14px;
+                                transition: all .5s;
+                                &:hover{
+                                    @include hoverButton($color-white-0,$color-black-1,$color-pink-1);
+                                }
+                            }
+                        }
+                    }
+                }
+                &.box__forgot{
+                    height: auto;
+                }
+            }
+        }
+    }
+}

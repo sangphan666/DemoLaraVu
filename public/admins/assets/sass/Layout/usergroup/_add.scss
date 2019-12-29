@@ -1,0 +1,83 @@
+.content{
+    .card{
+        .card-header{
+            .title_card{
+                @include styleText(16px,500,#3B4859);
+                margin-bottom: 0;
+            }
+        }
+        .card-body{
+            .box_input{
+                margin-bottom: 0;
+                label{
+                    @include styleText(12px,$fw-normal,#8998AC);
+                    span{
+                        color: #F50000;
+                    }
+                }
+                input{
+                    width: 350px;
+                    height: 36px;
+                    font-size: 12px;
+                    border-radius: 4px;
+                    &:focus{
+                        box-shadow: 0 0 0 0.2rem #EFF2F7;
+                        border-color: transparent;
+                        border: 1px solid #ced4da;
+                    }
+                }
+            }
+        }
+    }
+    .box_check_all{
+        margin-top: 20px;
+        .move_row{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            li{
+                margin-bottom: 20px;
+                .btn_move_row{
+                    width: 130px;
+                    height: 36px;
+                    @include styleButton(#FFFFFF,#CBCBCB,0,21px,21px);
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin: 0 auto;
+                    @include styleText(12px,$fw-normal,#CBCBCB);
+                    transition: all .5s;
+                    &:hover{
+                        border: 1px solid #CF0656;
+                        @include styleText(12px,$fw-normal,#CF0656);
+                    }
+                }
+                &:last-child{
+                    i{
+                        -webkit-transform: rotate(-180deg);
+                        transform: rotate(-180deg);
+                        display: inline-block;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+        .card-body{
+            display: inline-block;
+            height: 502px;
+            width: 100%;
+            overflow-x: hidden;
+            position: relative;
+            table{
+                thead{
+                    th{
+                        position: sticky;
+                        top: 0;
+                        z-index: 999;
+                    }
+                    
+                }
+            }
+        }
+    }
+}
